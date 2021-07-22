@@ -1,5 +1,12 @@
+# upload folder
 upload
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+
+#virtualenv
+bin
+lib
+lib64
+share
