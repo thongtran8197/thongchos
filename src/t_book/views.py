@@ -1,5 +1,13 @@
-from django.http import HttpResponse
+from rest_framework import viewsets
+
+from .models import Book
+from .serializer.book import BookSerializer
 
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+class UserViewSet(viewsets.ModelViewSet):
+    view_set = "t_book"
+    queryset = Book.objects.all()
+    serializer_class = BookSerializer
+
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)
