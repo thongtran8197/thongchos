@@ -11,3 +11,6 @@ lib
 lib64
 share
 include
+
+# git
+.idea
